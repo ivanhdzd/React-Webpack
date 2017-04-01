@@ -24245,6 +24245,10 @@ var _app = __webpack_require__(192);
 
 var _app2 = _interopRequireDefault(_app);
 
+var _reactLogo = __webpack_require__(191);
+
+var _reactLogo2 = _interopRequireDefault(_reactLogo);
+
 var _home = __webpack_require__(187);
 
 var _home2 = _interopRequireDefault(_home);
@@ -24273,9 +24277,9 @@ var App = function (_Component) {
                 'section',
                 null,
                 _react2.default.createElement(
-                    'h1',
-                    null,
-                    'Hello world from App component, Yeah!'
+                    'nav',
+                    { id: 'nav' },
+                    _react2.default.createElement('img', { id: 'react-logo', src: _reactLogo2.default, alt: 'React logo' })
                 ),
                 _react2.default.createElement(_home2.default, null)
             );
@@ -24308,10 +24312,6 @@ var _home = __webpack_require__(193);
 
 var _home2 = _interopRequireDefault(_home);
 
-var _reactLogo = __webpack_require__(191);
-
-var _reactLogo2 = _interopRequireDefault(_reactLogo);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24341,9 +24341,9 @@ var Home = function (_Component) {
                     'Hello from Home component'
                 ),
                 _react2.default.createElement(
-                    'article',
-                    { id: 'react-logo-container' },
-                    _react2.default.createElement('img', { id: 'react-logo', src: _reactLogo2.default, alt: 'React logo' })
+                    'span',
+                    { id: 'reminder' },
+                    'Remember to enclose your JSX code in a main block (as a section) in each component to prevent an error from ReactDOM.'
                 )
             );
         }
@@ -24363,7 +24363,7 @@ exports = module.exports = __webpack_require__(31)(undefined);
 
 
 // module
-exports.push([module.i, "h1 {\r\n    color: white;\r\n    text-align: center;\r\n    font-size: 4em;\r\n}\r\n", ""]);
+exports.push([module.i, "#nav {\r\n    width: 100%;\r\n    background: black;\r\n    min-height: 12.5em;\r\n    padding-left: calc(50% - 6em);\r\n}\r\n\r\n#react-logo {\r\n    margin: 1em;\r\n    width: 10em;\r\n    height: 10em;\r\n    animation: react-logo-idle infinite 2s linear;\r\n}\r\n\r\n@keyframes react-logo-idle {\r\n    0%: {\r\n        margin: 2em;\r\n        width: 8em;\r\n        height: 8em;\r\n        transform: rotate(0deg);\r\n    }\r\n    50% {\r\n        margin: 0em;\r\n        width: 12em;\r\n        height: 12em;\r\n        transform: rotate(60deg);\r\n    }\r\n    100%: {\r\n        margin: 2em;\r\n        width: 8em;\r\n        height: 8em;\r\n        transform: rotate(120deg);\r\n    }\r\n}\r\n", ""]);
 
 // exports
 
@@ -24377,7 +24377,7 @@ exports = module.exports = __webpack_require__(31)(undefined);
 
 
 // module
-exports.push([module.i, "h2 {\r\n    color: white;\r\n    font-size: 3em;\r\n    text-align: center;\r\n}\r\n\r\n#react-logo-container {\r\n    display: inline-block;\r\n    color: black;\r\n    align-content: center;\r\n    width: 100%;\r\n}\r\n\r\n#react-logo {\r\n    animation: react-logo-idle infinite 2s linear;\r\n}\r\n\r\n@keyframes react-logo-idle {\r\n    0%: {\r\n        width: 10em;\r\n        height: 10em;\r\n        margin: 1em;\r\n    }\r\n    50% {\r\n        width: 12em;\r\n        height: 12em;\r\n        margin: 0em;\r\n    }\r\n    100%: {\r\n        width: 10em;\r\n        height: 10em;\r\n        margin: 1em;\r\n    }\r\n}\r\n", ""]);
+exports.push([module.i, "#reminder {\r\n    padding: 1em;\r\n    border-radius: 1em;\r\n    background: white;\r\n    font-style: oblique;\r\n    text-align: center;\r\n    color: red;\r\n}\r\n", ""]);
 
 // exports
 
@@ -24391,7 +24391,7 @@ exports = module.exports = __webpack_require__(31)(undefined);
 
 
 // module
-exports.push([module.i, "body {\r\n    font-family: sans-serif;\r\n    background: #6CF;\r\n}\r\n", ""]);
+exports.push([module.i, "body {\r\n    font-family: sans-serif;\r\n    overflow-x: hidden;\r\n    overflow-y: auto;\r\n    background: #6CF;\r\n    margin: 0;\r\n}\r\n\r\nh1, h2 {\r\n    color: white;\r\n    text-align: center;\r\n}\r\n\r\nh1 {\r\n    font-size: 4em;\r\n}\r\n\r\nh2 {\r\n    font-size: 3em;\r\n}\r\n", ""]);
 
 // exports
 

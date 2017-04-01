@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import css from './app.css';
 import logo from '../assets/svg/react-logo.svg';
-
-import Home from './components/home/home';
+import Home from './components/home/home.jsx';
 
 export default class App extends Component {
     render() {
