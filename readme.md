@@ -2,19 +2,24 @@
 
 [Tutorial reference is here](https://scotch.io/tutorials/setup-a-react-environment-using-webpack-and-babel)
 
-## What is it?
+## What does this project use?
 
 This project uses:
 - `ReactJS`: Front-End Javascript library developed by Facebook. It official site is [here](https://facebook.github.io/react/).
 - `Webpack`: Module bundler for modern Javascript applications. It official site is [here](https://webpack.js.org/) and it [Github repository](https://github.com/webpack/webpack).
-- `Webpack Babel Loader`: Allows transpiling JavaScript files using Babel and webpack. This Github repository is [here](https://github.com/babel/babel-loader).
-- `Webpack CSS loader`: Interprets @import and url() like requires. This Github repository is [here](https://github.com/webpack-contrib/css-loader).
+- `Webpack Babel Loader`: Loads ES2015+ code and transpiles to ES5 using Babel. This Github repository is [here](https://github.com/babel/babel-loader).
+- `Webpack CSS loader`: Loads CSS file with resolved imports and returns CSS codes. This Github repository is [here](https://github.com/webpack-contrib/css-loader).
+- `Webpack file loader`: Emits the file into the output folder and returns the (relative) url. this Github repository is [here](https://github.com/webpack-contrib/file-loader).
+
+### Are there more loaders?
+
+If you want to check other loaders, you need to read [Webpack Github repository](https://github.com/webpack/webpack) in Loaders section.
 
 ## What do I need?
 
-You need to have installed only NodeJS. You can download it from [Official NodeJS site](https://nodejs.org/en/).
+You need to have installed only NodeJS. You can download it from [official NodeJS site](https://nodejs.org/en/).
 If you have Windows 10, you can use PowerShell.
-If tou have older Windows version than 10, you can install Gitbash from [it official site](https://git-scm.com/download/win) and work with it.
+If tou have older Windows version than 10, you can install Gitbash from it [official site](https://git-scm.com/download/win) and work with it.
 If you have Mac or Linux, you can use it terminal.
 
 ## How to run it?

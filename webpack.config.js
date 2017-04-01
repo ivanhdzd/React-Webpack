@@ -17,7 +17,11 @@ module.exports = {
     module: {
         rules: [
             { test: /\.(js|jsx)$/, loader: 'babel-loader', exclude: '/node_modules/' },
-            { test: /\.css$/, use: [ 'style-loader', 'css-loader' ] }
+            { test: /\.css$/, loaders: [ 'style-loader', 'css-loader' ] },
+            { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader' },
+            { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader' },
+            { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader' },
+            { test: /\.(woff|woff2)$/, loader: 'file-loader' },
         ]
     },
     devServer: {
