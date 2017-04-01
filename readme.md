@@ -7,13 +7,25 @@
 This project uses:
 - `ReactJS`: Front-End Javascript library developed by Facebook. It official site is [here](https://facebook.github.io/react/).
 - `Webpack`: Module bundler for modern Javascript applications. It official site is [here](https://webpack.js.org/) and it [Github repository](https://github.com/webpack/webpack).
+
+### Webpack loaders
+
 - `Webpack Babel Loader`: Loads ES2015+ code and transpiles to ES5 using Babel. This Github repository is [here](https://github.com/babel/babel-loader).
 - `Webpack CSS loader`: Loads CSS file with resolved imports and returns CSS codes. This Github repository is [here](https://github.com/webpack-contrib/css-loader).
 - `Webpack file loader`: Emits the file into the output folder and returns the (relative) url. this Github repository is [here](https://github.com/webpack-contrib/file-loader).
 
-### Are there more loaders?
+#### Are there more loaders?
 
 If you want to check other loaders, you need to read [Webpack Github repository](https://github.com/webpack/webpack) in Loaders section.
+
+### Webpack plugins
+
+- `html-webpack-plugin`: Simplifies creation of HTML files (`index.html`) to serve your bundles. [Github repository here](https://github.com/jantimon/html-webpack-plugin).
+- `extract-text-webpack-plugin`: Extracts Text (CSS) from your bundles into a separate file (`app.bundle.css`). [Github repository here](https://github.com/webpack-contrib/extract-text-webpack-plugin).
+
+#### Are there more plugins?
+
+If you want to check other plugins, you need to read [Webpack Github repository](https://github.com/webpack/webpack) in Plugins section. [Here](https://github.com/webpack-contrib) and [here](https://github.com/webpack/webpack/tree/master/lib/optimize) there are more plugins.
 
 ## What do I need?
 
