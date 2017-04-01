@@ -8,7 +8,7 @@ This project uses:
 - `ReactJS`: Front-End Javascript library developed by Facebook. It official site is [here](https://facebook.github.io/react/).
 - `Webpack`: Module bundler for modern Javascript applications. It official site is [here](https://webpack.js.org/) and it [Github repository](https://github.com/webpack/webpack).
 - `Webpack Babel Loader`: Allows transpiling JavaScript files using Babel and webpack. This Github repository is [here](https://github.com/babel/babel-loader).
-- `Webpack CSS loader`: Interprets @import and url() like requires. This Github reposiroty is [here](https://github.com/webpack-contrib/css-loader).
+- `Webpack CSS loader`: Interprets @import and url() like requires. This Github repository is [here](https://github.com/webpack-contrib/css-loader).
 
 ## What do I need?
 
