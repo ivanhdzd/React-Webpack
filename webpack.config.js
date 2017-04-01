@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -6,7 +7,7 @@ module.exports = {
     entry: [ './src/index.jsx' ],
     output: {
         path: path.resolve('docs'),
-        filename: 'bundle.js'
+        filename: 'bundle.min.js'
     },
     watch: false,
     module: {
@@ -20,7 +21,14 @@ module.exports = {
 				test: /\.css$/,
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
-					use: 'css-loader'
+					use: [
+						{
+							loader: 'css-loader',
+							options: {
+								minimize: true
+							}
+						}
+					]
 				})
 			},
             {
@@ -45,10 +53,24 @@ module.exports = {
         contentBase: 'docs'
     },
     plugins: [
+		new webpack.DefinePlugin({
+			'process.env': {
+				NODE_ENV: JSON.stringify('development') // development | production
+			}
+		}),
 		new HtmlWebpackPlugin({
 		    template: './src/index.html',
-		    filename: 'index.html'
+		    filename: 'index.html',
+			favicon: './src/favicon.ico'
 		}),
-		new ExtractTextPlugin('bundle.css')
+		new ExtractTextPlugin('bundle.min.css'),
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings: false,
+			},
+			output: {
+				comments: false,
+			}
+		})
     ]
 };

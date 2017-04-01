@@ -8,6 +8,27 @@ This project uses:
 - `ReactJS`: Front-End Javascript library developed by Facebook. It official site is [here](https://facebook.github.io/react/).
 - `Webpack`: Module bundler for modern Javascript applications. It official site is [here](https://webpack.js.org/) and it [Github repository](https://github.com/webpack/webpack).
 
+### Webpack development and production environment
+
+By default, `webpack.config.js` has hardcoded `development` NodeJS environment. When this project is launched to `production`, you need to change it, like this:
+
+```bash
+module.exports = {
+    ...
+    plugins: [
+		...
+		new webpack.DefinePlugin({
+			'process.env': {
+				NODE_ENV: JSON.stringify('production')
+			}
+		}),
+		...
+    ]
+};
+```
+
+When it project is in `development` environment, ReactJS identify `bundle.min.js` code was minified and it show a warning asking you change NodeJS environment to `production`, because in `development` environment ReactJS launch develop warnings and comments in browser console. In production ReactJS ignore it messages.
+
 ### Webpack loaders
 
 - `Webpack Babel Loader`: Loads ES2015+ code and transpiles to ES5 using Babel. This Github repository is [here](https://github.com/babel/babel-loader).
@@ -49,7 +70,7 @@ npm start
 ```
 
 After run it, terminal show a message like this `Project is running at http://localhost:8080`.
-Finally, open your favourite browser and go to `http://127.0.0.1:8080` ip.
+Then, open your favourite browser and go to `http://127.0.0.1:8080` ip.
 
 ## Where is production version project?
 
@@ -57,4 +78,4 @@ Production version project is `docs` directory.
 
 ## TO DO:
 
-- Minify `bundle.js` file in `docs` directory.
+- Check how to minify `./docs/index.html` with `html-webpack-plugin`.
