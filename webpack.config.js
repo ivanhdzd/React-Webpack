@@ -1,7 +1,7 @@
 const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack'); // https://github.com/webpack/webpack
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // https://github.com/jantimon/html-webpack-plugin
+const ExtractTextPlugin = require('extract-text-webpack-plugin'); // https://github.com/webpack-contrib/extract-text-webpack-plugin
 
 module.exports = {
     entry: [ './src/index.jsx' ],
@@ -53,7 +53,7 @@ module.exports = {
         contentBase: 'docs'
     },
     plugins: [
-		new webpack.DefinePlugin({
+		new webpack.DefinePlugin({ // https://facebook.github.io/react/docs/optimizing-performance.html#use-the-production-build
 			'process.env': {
 				NODE_ENV: JSON.stringify('development') // development | production
 			}
