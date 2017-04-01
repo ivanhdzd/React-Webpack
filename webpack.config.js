@@ -15,8 +15,9 @@ module.exports = {
     },
     watch: false,
     module: {
-        loaders: [
-            { test: /\.(js|jsx)$/, loader: 'babel-loader', exclude: '/node_modules/' }
+        rules: [
+            { test: /\.(js|jsx)$/, loader: 'babel-loader', exclude: '/node_modules/' },
+            { test: /\.css$/, use: [ 'style-loader', 'css-loader' ] }
         ]
     },
     devServer: {
